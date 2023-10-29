@@ -1,5 +1,4 @@
 def pressure_converter(value, from_unit, to_unit):
-    # 압력 단위 간의 변환 비율을 정의한 딕셔너리
     units = {
         "atm": 1.0,
         "Pa": 101325.0,
@@ -14,13 +13,11 @@ def pressure_converter(value, from_unit, to_unit):
     }
 
     if from_unit in units and to_unit in units:
-        # 변환 계산 수행
         result = value * units[from_unit] / units[to_unit]
         return result
     else:
         return "지원하지 않는 단위입니다."
 
-# 메인 함수
 def main():
     while True:
         try:
